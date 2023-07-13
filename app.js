@@ -26,7 +26,7 @@ app.use(api + '/orders', ordersRoutes)
 
 
 //Database
-mongoose.connect('mongodb+srv://eshop-user:12345stella@cluster0.9frgqgh.mongodb.net/eshop-database?retryWrites=true&w=majority')
+mongoose.connect(process.env.CONNECTION_STRING)
 .then(()=>{
     console.log('Database connection is ready ....')
 }).catch((err)=>{
